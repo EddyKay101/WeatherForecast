@@ -56,53 +56,6 @@ class MainController extends Controller
         return ($temp-32)*.5556;
     }
 
-    public static function get_icon($icon){
-        if($icon =='clear-day'){
-            $the_icon = '<i class="wi wi-day-sunny"></i>';
-            return $the_icon;
-        }
-        elseif($icon =='clear-night'){
-            $the_icon = '<i class="wi wi-clear-night"></i>';
-            return $the_icon;
-        }
-        elseif($icon =='rain'){
-            $the_icon = '<i class="wi wi-rain"></i>';
-            return $the_icon;
-        }
-        elseif($icon =='snow'){
-            $the_icon = '<i class="wi wi-snow"></i>';
-            return $the_icon;
-        }
-        elseif($icon =='sleet'){
-            $the_icon = '<i class="wi wi-sleet"></i>';
-            return $the_icon;
-        }
-        elseif($icon =='wind'){
-            $the_icon = '<i class="wi wi-strong-windy"></i>';
-            return $the_icon;
-        }
-        elseif($icon =='fog'){
-            $the_icon = '<i class="wi wi-fog"></i>';
-            return $the_icon;
-        }
-        elseif($icon =='cloudy'){
-            $the_icon = '<i class="wi wi-cloudy"></i>';
-            return $the_icon;
-        }
-        elseif($icon =='partly-cloudy-day'){
-            $the_icon = '<i class="wi wi-day-sunny-overcast"></i>';
-            return $the_icon;
-        }
-        elseif($icon =='partly-cloudy-night'){
-            $the_icon = '<i class="wi wi-night-alt-cloudy"></i>';
-            return $the_icon;
-        }
-        else {
-            $the_icon = '<i class="wi wi-thermometer"></i>';
-            return $the_icon;
-        }
-    }
-
     function logout() {
         Auth::logout();
         return redirect('main');
